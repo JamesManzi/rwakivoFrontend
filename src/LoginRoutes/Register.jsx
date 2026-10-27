@@ -61,7 +61,7 @@ function Register() {
   return (
     <main className="register-page">
       <section className="register-intro">
-        <Link to="/" className="register-brand">
+        <Link to="#" className="register-brand">
           <span className="register-brand-icon">R</span>
           <span>Rwakivo Market</span>
         </Link>

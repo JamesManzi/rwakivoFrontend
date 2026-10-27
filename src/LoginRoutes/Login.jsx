@@ -41,8 +41,13 @@ function Login() {
 
         setMessage("Login successful! Redirecting...");
         setMessageType("success");
-
-        navigate("/dashboard");
+        setTimeout(()=>{
+          if(res.data.user.role=="admin"){
+            navigate("/adminDashboard");
+          } else{
+            navigate("/dashboard");
+          }
+        },1500)
       } else {
         setMessage(res.data.message || "Unable to log in.");
         setMessageType("error");
